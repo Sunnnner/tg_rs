@@ -7,6 +7,9 @@
 - .tt-off Direct input in a group disables the translation function of this account/channel number in that chat/group.
 - .tt-on,zh,zh|en|ruSets and enables the translation function for this account/channel number in this chat/group. The parameters are in order: source language, target language list.
 
+## [怎么获取session](https://hub.docker.com/repository/docker/whitek/tg_translate/general)
+
+
 ## 支持语言
 ``` text
 
@@ -81,3 +84,6 @@ TR - Turkish
 UK - Ukrainian
 ZH - Chinese (simplified)
 ```
+
+### 功能视频
+<video src=".video/video.mp4" controls="controls" width="500" height="500"></video>

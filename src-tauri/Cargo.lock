@@ -3928,6 +3928,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "telegram_rendering_rs"
+version = "1.0.0"
+dependencies = [
+ "dirs",
+ "log",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "tauri-plugin-store",
+ "thiserror",
+]
+
+[[package]]
 name = "tempfile"
 version = "3.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3948,20 +3962,6 @@ dependencies = [
  "futf",
  "mac",
  "utf-8",
-]
-
-[[package]]
-name = "tg_rs"
-version = "0.0.0"
-dependencies = [
- "dirs",
- "log",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "tauri-plugin-store",
- "thiserror",
 ]
 
 [[package]]

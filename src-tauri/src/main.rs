@@ -23,7 +23,7 @@ async fn run_python_script(
             .output()?
     } else if cfg!(target_os = "macos") {
         Command::new("bash") 
-            .arg("-c") .arg(format!("nohup {} app.py --api_id={} --api_hash={} --session={} --proxy_host={} --proxy_port={} --config={} > /dev/null &", 
+            .arg("-c").arg(format!("nohup {} app.py --api_id={} --api_hash={} --session={} --proxy_host={} --proxy_port={} --config={} > /dev/null &", 
                                     &python, &api_id, &api_hash, &session, &proxy_host, &proxy_port, &config_path.display())) 
             .stdout(std::process::Stdio::null())
             .stderr(std::process::Stdio::null()) 
@@ -31,8 +31,8 @@ async fn run_python_script(
     } else {
         Command::new("sh")
             .arg("-c")
-            .arg(format!(format!("nohup {} app.py --api_id={} --api_hash={} --session={} --proxy_host={} --proxy_port={} --config={} > /dev/null &", 
-            &python, &api_id, &api_hash, &session, &proxy_host, &proxy_port, &config_path.display()))
+            .arg(format!("nohup {} app.py --api_id={} --api_hash={} --session={} --proxy_host={} --proxy_port={} --config={} > /dev/null &",
+                                &python, &api_id, &api_hash, &session, &proxy_host, &proxy_port, &config_path.display()))
             .stdout(std::process::Stdio::null())
             .stderr(std::process::Stdio::null())
             .output()?

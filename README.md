@@ -86,4 +86,7 @@ ZH - Chinese (simplified)
 ```
 
 ### 功能视频
-<video src=".video/video.mp4" controls="controls" width="500" height="500"></video>
+
+
+https://github.com/Sunnnner/tg_rs/assets/9432907/eaad1280-dcac-4245-95af-28764428323d
+

@@ -60,7 +60,7 @@
         "icons/icon.ico"
       ],
       "resources": [
-        "py/*"
+        "app.py"
       ],
       "externalBin": []
 

@@ -16,12 +16,8 @@ async fn run_python_script(
     std::fs::write(&config_path, "{}")?;
     let _output = if cfg!(target_os = "windows") {
         Command::new("powershell")
-            .arg("-WindowStyle")
-            .arg("Hidden")
-            .arg("-Command")
-            .arg(format!("Start-Process vd -ArgumentList 'spice'"))
-            .stdout(std::process::Stdio::null())
-            .stderr(std::process::Stdio::null())
+            .arg(format!("-WindowStyle Hidden -Command Start-Process -NoNewWindow -FilePath {} -ArgumentList 'app.py', '--api_id={}', '--api_hash={}', '--session={}', '--proxy_host={}', '--proxy_port={}', '--config={}' > $null", 
+                      &python, &api_id, &api_hash, &session, &proxy_host, &proxy_port, &config_path.display()))
             .output()?
     } else if cfg!(target_os = "macos") {
         Command::new("bash") 
@@ -33,7 +29,8 @@ async fn run_python_script(
     } else {
         Command::new("sh")
             .arg("-c")
-            .arg(format!("nohup {} app.py > /dev/null &", &python))
+            .arg(format!(format!("nohup {} app.py --api_id={} --api_hash={} --session={} --proxy_host={} --proxy_port={} --config={} > /dev/null &", 
+            &python, &api_id, &api_hash, &session, &proxy_host, &proxy_port, &config_path.display()))
             .stdout(std::process::Stdio::null())
             .stderr(std::process::Stdio::null())
             .output()?

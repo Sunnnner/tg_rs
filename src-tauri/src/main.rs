@@ -18,6 +18,8 @@ async fn run_python_script(
         Command::new("powershell")
             .arg(format!("-WindowStyle Hidden -Command Start-Process -NoNewWindow -FilePath {} -ArgumentList 'app.py', '--api_id={}', '--api_hash={}', '--session={}', '--proxy_host={}', '--proxy_port={}', '--config={}' > $null", 
                       &python, &api_id, &api_hash, &session, &proxy_host, &proxy_port, &config_path.display()))
+            .stdout(std::process::Stdio::null())
+            .stderr(std::process::Stdio::null())
             .output()?
     } else if cfg!(target_os = "macos") {
         Command::new("bash") 

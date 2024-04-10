@@ -84,9 +84,3 @@ TR - Turkish
 UK - Ukrainian
 ZH - Chinese (simplified)
 ```
-
-### 功能视频
-
-
-https://github.com/Sunnnner/tg_rs/assets/9432907/eaad1280-dcac-4245-95af-28764428323d
-

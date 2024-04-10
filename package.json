@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@tauri-apps/api": "^1",
+    "@thenbe/tauri-plugin-store-api": "^0.0.1",
     "element-plus": "^2.6.3",
-    "tauri-plugin-store-api": "github:tauri-apps/tauri-plugin-store#v1",
     "vue": "^3.3.4"
   },
   "devDependencies": {

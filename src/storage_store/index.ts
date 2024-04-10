@@ -1,4 +1,4 @@
-import { Store } from "tauri-plugin-store-api";
+import { Store } from "@thenbe/tauri-plugin-store-api";
 import { configDir } from '@tauri-apps/api/path';
 
 const appConfigDirPath = await configDir();

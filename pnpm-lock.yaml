@@ -8,12 +8,12 @@ dependencies:
   '@tauri-apps/api':
     specifier: ^1
     version: 1.0.0
+  '@thenbe/tauri-plugin-store-api':
+    specifier: ^0.0.1
+    version: 0.0.1
   element-plus:
     specifier: ^2.6.3
     version: 2.6.3(vue@3.3.4)
-  tauri-plugin-store-api:
-    specifier: github:tauri-apps/tauri-plugin-store#v1
-    version: github.com/tauri-apps/tauri-plugin-store/02243686d0507d2aeeb2924cd889dd0bcb47ecef
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -566,6 +566,12 @@ packages:
       '@tauri-apps/cli-win32-ia32-msvc': 1.0.0
       '@tauri-apps/cli-win32-x64-msvc': 1.0.0
     dev: true
+
+  /@thenbe/tauri-plugin-store-api@0.0.1:
+    resolution: {integrity: sha512-WDzyixAs0rryStCOgTtJFVNnTWHLZo2L7wy0zSXSt+UcCCpbTTwMTbPD2fFxI87abAxFrE9ok+fGFo3DlK5Ikw==}
+    dependencies:
+      '@tauri-apps/api': 1.5.3
+    dev: false
 
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
@@ -1426,11 +1432,3 @@ packages:
   /yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: true
-
-  github.com/tauri-apps/tauri-plugin-store/02243686d0507d2aeeb2924cd889dd0bcb47ecef:
-    resolution: {commit: 02243686d0507d2aeeb2924cd889dd0bcb47ecef, repo: git+ssh://git@github.com/tauri-apps/tauri-plugin-store.git, type: git}
-    name: tauri-plugin-store-api
-    version: 0.0.0
-    dependencies:
-      '@tauri-apps/api': 1.5.3
-    dev: false
